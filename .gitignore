@@ -21,3 +21,6 @@ __pycache__/
 .env
 .env.local
 .
+
+# secret files
+secret.json
