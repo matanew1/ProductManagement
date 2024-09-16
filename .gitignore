@@ -1,0 +1,23 @@
+# OS-specific files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Log files
+*.log
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environment files
+.env
+.env.local
+.
