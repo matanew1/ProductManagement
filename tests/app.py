@@ -41,13 +41,13 @@ class APITestCase(unittest.TestCase):
 
     def test_delete_product(self):
         token = self.get_token()
-        response = requests.delete(self.base_url + '/delete_product/-O6wP7MLkak-VzLOewal', headers={
+        response = requests.delete(self.base_url + '/delete_product/-O6yolmVYAhsRX0bytlQ', headers={
             'Authorization': token
         })
         self.assertEqual(response.status_code, 204)
 
     def test_get_product(self):
-        response = requests.get(self.base_url + '/product_info/-O6wImwFdvadJsw24vZQ')
+        response = requests.get(self.base_url + '/product_info/-O6wLMaNoRm9978jsjyX')
         self.assertEqual(response.status_code, 200)
         pprint.pprint(response.json())
 
@@ -61,13 +61,13 @@ class APITestCase(unittest.TestCase):
         response = requests.put(self.base_url + '/update_product/-O6wLMaNoRm9978jsjyX', headers={
             'Authorization': token
         }, json={
-            'product': 'Updated Product'
+            'product': 'Matan Product'
         })
         self.assertEqual(response.status_code, 200)
         pprint.pprint(response.json())
 
     def test_search_product(self):
-        search_query = 'Updated'
+        search_query = 'Matan'
         response = requests.get(f'{self.base_url}/search_products?query={search_query}')
 
         self.assertEqual(response.status_code, 200)
